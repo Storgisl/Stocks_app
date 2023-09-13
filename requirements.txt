@@ -1,0 +1,34 @@
+bzip2== 1.0.8
+ca-certificates==2023.7.22
+cachetools==5.3.1
+deprecation==2.1.0
+grpcio==1.58.0
+libexpat==2.5.0
+libffi==3.4.2
+libsqlite==3.43.0
+libzlib==1.2.13
+openssl==3.1.2
+packaging==23.1
+pip==23.2.1
+protobuf==4.24.3
+python==3.11.5
+python-dateutil==2.8.2
+setuptools==68.1.2
+six==1.16.0
+tinkoff==0.1.1
+tinkoff-investments==0.2.0b59
+tk==8.6.12
+tzdata==2023c
+ucrt==10.0.22621.0
+vc==14.3
+vc14_runtime==14.36.32532
+vs2015_runtime==14.36.32532
+wheel== 0.41.2
+xz==5.2.6
+libhwloc==2.9.2
+libxml2==2.11.5
+liblapack==3.9.0
+tbb==2021.10.0
+libblas==3.9.0
+libcblas==3.9.0
+numpy==1.25.2
