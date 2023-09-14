@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 
 figi_list = "figi.txt"
-token = "t.RGHTeiIzzQ1jS026aH06FFRUQ7RNpv2reed0m5azzlY0hjpWID-fxS1C1t1BNDBVRxZizgvR3GP9K4UirjVJrA"
+token = ""
 minimum_year = 2017
 current_year = datetime.now().year
 url = "https://invest-public-api.tinkoff.ru/history-data"
