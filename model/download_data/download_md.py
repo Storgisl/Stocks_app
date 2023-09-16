@@ -2,9 +2,12 @@ import requests
 import os
 import time
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 figi_list = "figi.txt"
-token = "t.RGHTeiIzzQ1jS026aH06FFRUQ7RNpv2reed0m5azzlY0hjpWID-fxS1C1t1BNDBVRxZizgvR3GP9K4UirjVJrA"
+token = os.getenv("TOKEN")
 minimum_year = 2017
 current_year = datetime.now().year
 url = "https://invest-public-api.tinkoff.ru/history-data"
@@ -52,10 +55,14 @@ def download(figi, year):
             os.remove(file_name)
         except FileNotFoundError:
             pass
-    elif response_code != 200:
-        # In case of any other error, print the error code and exit
+    elif response_code == 200:
+        # Save the response content to the file
+        with open(file_name, "wb") as file:
+            file.write(response.content)
+        print(f"Downloaded {figi} for year {year}")
+    else:
+        # In case of any other error, print the error code
         print(f"Unspecified error with code: {response_code}")
-        exit(1)
 
     year -= 1
     download(figi, year)
